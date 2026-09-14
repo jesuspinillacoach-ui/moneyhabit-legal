@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MoneyHabit — Política de Privacidad / Privacy Policy</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f4f6f5;
+    --card: #ffffff;
+    --ink: #16233a;
+    --ink-soft: #4b5768;
+    --navy: #0b3350;
+    --emerald: #16a974;
+    --border: #e2e6e4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0c1420;
+      --card: #131e2c;
+      --ink: #eef2f5;
+      --ink-soft: #a9b4c0;
+      --navy: #6fb3e0;
+      --emerald: #35d38f;
+      --border: #24313f;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 48px 24px 96px; }
+  header { text-align: center; margin-bottom: 40px; }
+  header .badge {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 56px; height: 56px; border-radius: 16px;
+    background: var(--navy); color: #fff; font-weight: 800; font-size: 20px;
+    margin-bottom: 16px;
+  }
+  h1 { font-size: 26px; margin: 0 0 4px; }
+  header p { color: var(--ink-soft); margin: 0; font-size: 14px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 28px;
+  }
+  h2 {
+    font-size: 20px;
+    color: var(--navy);
+    border-bottom: 2px solid var(--emerald);
+    padding-bottom: 8px;
+    margin-top: 36px;
+  }
+  h2:first-child { margin-top: 0; }
+  h3 { font-size: 15px; margin-bottom: 6px; }
+  p, li { color: var(--ink); font-size: 15px; }
+  ul { padding-left: 20px; }
+  strong { color: var(--ink); }
+  .lang-toggle {
+    display: flex; justify-content: center; gap: 8px; margin-bottom: 32px;
+  }
+  .lang-toggle a {
+    padding: 8px 18px; border-radius: 999px; border: 1px solid var(--border);
+    color: var(--ink-soft); text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+  .lang-toggle a.active { background: var(--emerald); color: #06251a; border-color: var(--emerald); }
+  footer { text-align: center; color: var(--ink-soft); font-size: 12.5px; margin-top: 16px; }
+  #en { display: none; }
+  :target { scroll-margin-top: 20px; }
+</style>
+<script>
+  function showLang(lang) {
+    document.getElementById('es').style.display = lang === 'es' ? 'block' : 'none';
+    document.getElementById('en').style.display = lang === 'en' ? 'block' : 'none';
+    document.getElementById('tab-es').classList.toggle('active', lang === 'es');
+    document.getElementById('tab-en').classList.toggle('active', lang === 'en');
+    try { localStorage.setItem('mh-legal-lang', lang); } catch (e) {}
+  }
+  window.addEventListener('DOMContentLoaded', function () {
+    var saved = 'es';
+    try { saved = localStorage.getItem('mh-legal-lang') || 'es'; } catch (e) {}
+    showLang(saved);
+  });
+</script>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="badge">1%</div>
+    <h1>MoneyHabit</h1>
+    <p>Política de Privacidad · Privacy Policy — actualizado el 13 de septiembre de 2026</p>
+  </header>
+
+  <div class="lang-toggle">
+    <a href="#" id="tab-es" onclick="showLang('es'); return false;">Español</a>
+    <a href="#" id="tab-en" onclick="showLang('en'); return false;">English</a>
+  </div>
+
+  <div id="es" class="card">
+    <h2>1. Qué información recopilamos</h2>
+    <h3>Datos que tú ingresas directamente</h3>
+    <ul>
+      <li>Nombre, nombre de usuario, correo electrónico y contraseña, al crear tu cuenta.</li>
+      <li>Información financiera que registras tú mismo: ingresos, gastos, metas de ahorro, gastos e ingresos fijos, y los datos que uses en la calculadora de interés compuesto.</li>
+      <li>Hábitos personales que decides registrar (financieros, personales, mentales, espirituales).</li>
+      <li>Opcionalmente, una foto de perfil (cámara o galería).</li>
+      <li>Opcionalmente, notas de voz que conviertes en texto para registrar un movimiento (el audio solo se procesa para transcribirlo, no se guarda como archivo).</li>
+    </ul>
+    <h3>Lo que NO recopilamos</h3>
+    <ul>
+      <li>No usamos rastreadores de publicidad ni vendemos tus datos a terceros.</li>
+      <li>No accedemos a tu ubicación exacta (solo, si tú lo permites, detectamos tu país para sugerir la moneda correcta).</li>
+      <li>No leemos tus contactos, mensajes ni otras apps.</li>
+    </ul>
+
+    <h2>2. Dónde se guardan tus datos</h2>
+    <p>Por defecto, <strong>todos tus datos se guardan únicamente en tu propio dispositivo</strong>. MoneyHabit funciona completamente sin conexión para el uso diario.</p>
+    <p><strong>Sincronización en la nube (opcional):</strong> si activas esta función desde Ajustes y creas una cuenta separada para ese fin, tus datos se copian a nuestro proveedor de base de datos en la nube, Supabase Inc., únicamente para que puedas ver la misma información en otro dispositivo. Supabase actúa como nuestro proveedor de infraestructura y no usa tu información para ningún fin propio.</p>
+
+    <h2>3. Permisos del dispositivo</h2>
+    <ul>
+      <li><strong>Cámara:</strong> solo para tomar una foto de perfil, si tú lo decides.</li>
+      <li><strong>Micrófono:</strong> solo para transcribir por voz un movimiento financiero, si tú activas esa función.</li>
+      <li><strong>Notificaciones:</strong> solo para los recordatorios diarios de hábitos que tú configuras.</li>
+      <li><strong>Internet:</strong> únicamente para la sincronización opcional en la nube y el directorio de negocios.</li>
+    </ul>
+    <p>Ningún permiso se usa para rastrearte ni se activa sin tu acción explícita.</p>
+
+    <h2>4. Tus derechos: acceso y eliminación</h2>
+    <p>Puedes eliminar tu cuenta y todos tus datos en cualquier momento desde <strong>Ajustes → Eliminar mi cuenta y mis datos</strong>. Esto borra de inmediato todo lo guardado en tu dispositivo y, si tenías sincronización en la nube activada, también borra tus datos del servidor.</p>
+    <p>Si además quieres eliminar por completo tu inicio de sesión en la nube (no solo tus datos), escríbenos a <strong>jesuspinillacoach@gmail.com</strong> desde el correo con el que te registraste, y lo haremos dentro de los siguientes 30 días.</p>
+
+    <h2>5. Menores de edad</h2>
+    <p>MoneyHabit es exclusivamente para personas mayores de 18 años. No recopilamos intencionalmente información de menores de edad.</p>
+
+    <h2>6. Seguridad</h2>
+    <p>Tu contraseña nunca se guarda en texto plano: se almacena con un hash criptográfico. La comunicación con nuestro proveedor en la nube (Supabase) viaja cifrada (HTTPS/TLS).</p>
+
+    <h2>7. Cambios a esta política</h2>
+    <p>Si actualizamos esta política de forma importante, lo indicaremos dentro de la app.</p>
+
+    <h2>8. Contacto</h2>
+    <p>Para cualquier pregunta sobre esta política o tus datos, escríbenos a <strong>jesuspinillacoach@gmail.com</strong>.</p>
+  </div>
+
+  <div id="en" class="card">
+    <h2>1. What we collect</h2>
+    <h3>Data you enter directly</h3>
+    <ul>
+      <li>Name, username, email and password when you create an account.</li>
+      <li>Financial information you log yourself (income, expenses, savings goals, fixed expenses/income, compound-interest calculator inputs).</li>
+      <li>Personal habits you choose to track (financial, personal, mental, spiritual).</li>
+      <li>Optionally, a profile photo (camera or gallery).</li>
+      <li>Optionally, voice notes you convert to text to log a transaction (the audio is only processed for transcription and is not stored as an audio file).</li>
+    </ul>
+    <h3>What we do NOT collect</h3>
+    <ul>
+      <li>No ad trackers, we never sell your data.</li>
+      <li>No precise location access (only an optional, explicit country detection to suggest the right currency).</li>
+      <li>We never read your contacts, messages, or other apps.</li>
+    </ul>
+
+    <h2>2. Where your data lives</h2>
+    <p>By default, <strong>all your data is stored only on your own device</strong> — MoneyHabit works fully offline for everyday use.</p>
+    <p><strong>Optional cloud sync:</strong> if you turn this on from Settings and create a separate account for it, your data is copied to our cloud database provider, Supabase Inc., solely so it's available on another device. Supabase acts strictly as our infrastructure processor and does not use your data for its own purposes.</p>
+
+    <h2>3. Device permissions</h2>
+    <ul>
+      <li><strong>Camera:</strong> only for an optional profile photo.</li>
+      <li><strong>Microphone:</strong> only to transcribe a financial movement by voice, if you enable that feature.</li>
+      <li><strong>Notifications:</strong> only for the daily habit reminders you configure.</li>
+      <li><strong>Internet:</strong> only for optional cloud sync and the business directory.</li>
+    </ul>
+    <p>No permission is ever used to track you or activated without your explicit action.</p>
+
+    <h2>4. Your rights: access and deletion</h2>
+    <p>You can delete your account and all your data at any time from <strong>Settings → Delete my account and data</strong>. This immediately erases everything on your device and, if cloud sync was on, also deletes your data from the server.</p>
+    <p>If you also want your cloud login itself fully removed (not just your data), email us at <strong>jesuspinillacoach@gmail.com</strong> from the address you registered with, and we will do so within 30 days.</p>
+
+    <h2>5. Minors</h2>
+    <p>MoneyHabit is exclusively for people 18 years of age or older. We do not knowingly collect information from minors.</p>
+
+    <h2>6. Security</h2>
+    <p>Your password is never stored in plain text — it is stored as a cryptographic hash. Communication with our cloud provider (Supabase) is encrypted in transit (HTTPS/TLS).</p>
+
+    <h2>7. Changes</h2>
+    <p>If we make a material change to this policy, we will note it inside the app.</p>
+
+    <h2>8. Contact</h2>
+    <p>For any question about this policy or your data, email <strong>jesuspinillacoach@gmail.com</strong>.</p>
+  </div>
+
+  <footer>MoneyHabit es desarrollada por JPPINS.</footer>
+</div>
+</body>
+</html>
